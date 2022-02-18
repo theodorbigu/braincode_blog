@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { PostCard, Categories, PostWidget } from "../components";
+import { PostCard, Categories, PostWidget} from "../components";
 import { getPosts } from "../services";
 import { FeaturedPosts } from "../sections";
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-10 mb-8 ">
+    <div className="container mx-auto px-10 mb-8 mt-10">
       <Head>
         <title>Braincode Blog</title>
         <link rel="icon" href="/favicon.ico" />
