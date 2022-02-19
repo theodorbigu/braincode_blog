@@ -10,6 +10,10 @@ module.exports = {
   },
   plugins: [],
   theme: {
+    fontFamily: {
+      text: ["Montserrat", "sans-serif"],
+      logo: ['"Press Start 2P"', 'cursive'],
+    },
     extend: {
       colors: {
         "card-blue": "#1a2c38",
