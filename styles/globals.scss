@@ -2,21 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@layer base {
+  @font-face {
+    font-family: Crackman;
+    src: url("../public/fonts/crackman.ttf") format("ttf");
+  }
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  &:before{
-    content:'';
+  font-family: "Montserrat", sans-serif;
+  //color: #eaebed;
+  &:before {
+    content: "";
     content: "";
     width: 100%;
     height: 100vh;
-    //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
-    // background: #D3D3D3;
-    background-image: url("../public/bg.jpg");
+    background-color: #0f212e;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23c92c7a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23a51b34' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23c3187a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a72b56' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23bf1e8d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23aa2358' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23b90a8e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ab0e5a' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b713a1' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23912b84' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%239e0da2' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23860f89' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    transform: rotate(180deg);
+    //background-color: #330033;
+    //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='457' height='457' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
     position: fixed;
     left: 0;
     top: 0;
@@ -27,31 +40,35 @@ body {
   }
 }
 
-.text-shadow{
+.main-logo {
+  font-family: "Press Start 2P";
+}
+
+.text-shadow {
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
 
-.adjacent-post{
-  & .arrow-btn{
+.adjacent-post {
+  & .arrow-btn {
     transition: width 300ms ease;
     width: 50px;
   }
-  &:hover{
-    & .arrow-btn{
+  &:hover {
+    & .arrow-btn {
       width: 60px;
     }
   }
 }
 
 .react-multi-carousel-list {
-  & .arrow-btn{
-    transition: width 300ms ease;
-    width: 50px;
-    &:hover{
-      width: 60px;
+  & .arrow-btn {
+    transition: background-color 300ms ease;
+    width: 26px;
+    &:hover {
+      background-color: #aa00aa;
+      transition: background-color 300ms ease;
     }
   }
-  
 }
 
 a {

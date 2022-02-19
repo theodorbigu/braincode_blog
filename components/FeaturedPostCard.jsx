@@ -18,7 +18,7 @@ const FeaturedPostCard = ({ post }) => (
         {post.title}
       </p>
       <div className="flex items-center absolute bottom-5 w-full justify-center">
-        <Image
+        <img
           unoptimized
           alt={post.author.name}
           height="30px"

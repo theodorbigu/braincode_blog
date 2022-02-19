@@ -6,11 +6,11 @@ const categories = [{}];
 
 export default function Header({ title }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-blue-400 py-8 text-center">
+    <div className="container mx-auto px-10 mb-8 mt-8">
+      <div className="w-full inline-block py-8 text-center">
         <div className="md:float-center block">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-white">
+            <span className="cursor-pointer font-bold text-6xl text-white main-logo">
               Braincode Blog
             </span>
           </Link>

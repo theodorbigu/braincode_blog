@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/Image";
 
 import moment from "moment";
 
@@ -61,7 +62,7 @@ const PostDetail = ({ post }) => {
   };
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="bg-card-blue shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
             src={post.featuredImage.url}
@@ -74,16 +75,16 @@ const PostDetail = ({ post }) => {
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
               <img
                 alt={post.author.name}
-                height="30px"
-                width="30px"
+                height="40px"
+                width="40px"
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">
+              <p className="inline align-middle text-text-color ml-2 font-medium text-lg">
                 {post.author.name}
               </p>
             </div>
-            <div className="font-medium text-gray-700">
+            <div className="font-medium text-text-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-2 text-pink-500"
@@ -103,14 +104,18 @@ const PostDetail = ({ post }) => {
               </span>
             </div>
           </div>
-          <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children.map((item, itemindex) =>
-              getContentFragment(itemindex, item.text, item)
-            );
+          <h1 className="mb-8 text-3xl text-text-color font-semibold">
+            {post.title}
+          </h1>
+          <div className="text-text-color">
+            {post.content.raw.children.map((typeObj, index) => {
+              const children = typeObj.children.map((item, itemindex) =>
+                getContentFragment(itemindex, item.text, item)
+              );
 
-            return getContentFragment(index, children, typeObj, typeObj.type);
-          })}
+              return getContentFragment(index, children, typeObj, typeObj.type);
+            })}
+          </div>
         </div>
       </div>
     </>
