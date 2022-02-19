@@ -3,5 +3,5 @@
 
 ![Braincode Blog](https://github.com/theodorbigu/braincode_blog/blob/main/public/demo/braincode.PNG?raw=true)
 <br/>
-Caramel Popcorn TV is a web app built with React and Material UI meant for searching movies and TV series. You can find information about the cast and rating, a short description for each movie and also the trailer.
+Braincode Blog is my personal blog where I write about my 2 passions: web development and graffiti. It was built with Next.js, Tailwin.css and GraphQL. The blog content is moderated with GraphCMS. Go and leave a comment on any of my posts :D
 # Live site : https://braincode-blog.vercel.app/
