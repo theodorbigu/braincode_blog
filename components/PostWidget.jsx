@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/Image";
+import Image from "next/image";
 import moment from "moment";
-import Link from "next/Link";
+import Link from "next/link";
 
 import { getSimilarPosts, getRecentPosts } from "../services";
 
