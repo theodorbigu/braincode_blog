@@ -16,9 +16,6 @@ module.exports = {
         "card-dark-blue": "#0f212e",
         "text-color": "#eaebed",
       },
-      fontFamily: {
-        'logo' : "Press Start 2P",
-      },
     },
   },
 };
