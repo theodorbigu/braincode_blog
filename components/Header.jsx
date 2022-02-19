@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { getCategories } from "../services";
 
-const categories = [{name: 'React', slug: 'react'}]
-
+const categories = [{ name: "React", slug: "react" }];
 
 const Header = () => {
   // const [categories, setCategories] = useState([]);
