@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import Image from "next/Image";
 import Link from "next/Link";
 
 const FeaturedPostCard = ({ post }) => (
